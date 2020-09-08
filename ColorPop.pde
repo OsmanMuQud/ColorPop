@@ -1,8 +1,10 @@
 PImage img;
+String saveLocation="K:/op2.jpg";//put the address where you wanna save the processed image
 void setup()
 {
+  //put the images width and height in size function(check in properties of the particular image)
   size(1024,768);
-  img=loadImage("img.jpg");
+  img=loadImage("img.jpg");//put name of the image you want to edit. 
   img.loadPixels();
   loadPixels();
   
@@ -42,5 +44,5 @@ void keyPressed()
   if(keyCode==DOWN)
   thres--;
   if(key=='s')
-  saveFrame("K:/op2.jpg");
+  saveFrame(saveLocation);
 }
